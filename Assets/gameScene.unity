@@ -263,7 +263,7 @@ Transform:
   m_GameObject: {fileID: 403951984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 0.95, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -279,7 +279,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92de3997cf628514da8bfe5ce8916770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 15
+  Speed: 12
   rb: {fileID: 403951985}
   hitClip: {fileID: 8300000, guid: 285595d68d3d92646815b463f6c0a764, type: 3}
 --- !u!82 &403951990
@@ -701,7 +701,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4146277148936014, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4146277148936014, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
       propertyPath: m_LocalScale.y
@@ -712,9 +712,32 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114440494870948080, guid: 6df2dee49f331824d9fc54f40012f972,
+        type: 2}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 403951985}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1708723378 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1182753832738074, guid: 6df2dee49f331824d9fc54f40012f972,
+    type: 2}
+  m_PrefabInternal: {fileID: 1708723377}
+--- !u!114 &1708723379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708723378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f62a031f65284443a49cc6b1ab46646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player2: {fileID: 369671668}
+  rb: {fileID: 403951985}
 --- !u!1001 &1950924073
 Prefab:
   m_ObjectHideFlags: 0
@@ -769,7 +792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4146277148936014, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4146277148936014, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
       propertyPath: m_LocalScale.y
@@ -780,6 +803,11 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114440494870948080, guid: 6df2dee49f331824d9fc54f40012f972,
+        type: 2}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 403951985}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6df2dee49f331824d9fc54f40012f972, type: 2}
   m_IsPrefabParent: 0

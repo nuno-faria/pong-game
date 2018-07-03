@@ -15,19 +15,21 @@ public class GameSetup : MonoBehaviour {
     public Transform player2;
 
 	void Start () {
-        topWall.size = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x * 2, 0.25f);
-        topWall.offset = new Vector2(0, mainCam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y + 0.6f);
+        topWall.size = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x * 2, 0.5f);
+        topWall.offset = new Vector2(0, mainCam.ScreenToWorldPoint(new Vector3(0, Screen.height, 0)).y + 0.7f);
 
-        bottomWall.size = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x * 2, 0.25f);
-        bottomWall.offset = new Vector2(0, mainCam.ScreenToWorldPoint(new Vector3(0, 0, 0)).y + 0.4f);
+        bottomWall.size = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x * 2, 0.5f);
+        bottomWall.offset = new Vector2(0, mainCam.ScreenToWorldPoint(new Vector3(0, 0, 0)).y + 0.3f);
 
-        leftWall.size = new Vector2(0.25f, mainCam.ScreenToWorldPoint(new Vector3(0, Screen.height * 2, 0)).y);
+        leftWall.size = new Vector2(0.5f, mainCam.ScreenToWorldPoint(new Vector3(0, Screen.height * 2, 0)).y);
         leftWall.offset = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(0, 0, 0)).x - 0.2f, 0);
 
-        rightWall.size = new Vector2(0.25f, mainCam.ScreenToWorldPoint(new Vector3(0f, Screen.height * 2, 0)).y);
+        rightWall.size = new Vector2(0.5f, mainCam.ScreenToWorldPoint(new Vector3(0f, Screen.height * 2, 0)).y);
         rightWall.offset = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x - 0.08f, 0);
 
-        player1.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(80, 0, 0)).x, player1.position.y);
-        player2.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width - 80, 0, 0)).x, player1.position.y);
+        player1.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(50, 0, 0)).x, player1.position.y);
+        player2.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width - 50, 0, 0)).x, player1.position.y);
+
+        Manager.Reset();
     }
 }
