@@ -31,11 +31,12 @@ public class PlayerControls : MonoBehaviour {
         }
 	}
 
-    //very simple ai (only follows ball y pos)
     public void Ai() {
-        if (ball.position.y > rb.position.y + 1)
-            rb.velocity = new Vector2(0, Speed);
-        else if (ball.position.y < rb.position.y - 1)
-            rb.velocity = new Vector2(0, -Speed);
+        if (ball.position.y != rb.position.y && ball.velocity.x != 0) {
+            if (ball.position.y >= rb.position.y + 0.5)
+                rb.velocity = new Vector2(0, Speed+5);
+            else if (ball.position.y < rb.position.y - 0.5)
+                rb.velocity = new Vector2(0, -Speed-5);
+        }
     }
 }

@@ -11,7 +11,7 @@ public class BallControls : MonoBehaviour {
     public AudioClip hitClip;
     private AudioSource audioS;
 
-	void Start () {
+	void Awake () {
         rb = GetComponent<Rigidbody2D>();
         audioS = GetComponent<AudioSource>();
         ResetBall();
@@ -28,8 +28,7 @@ public class BallControls : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.tag == "Player") {
-            rb.velocity = new Vector2(rb.velocity.x, intervalAbs(5,rb.velocity.y + collision.collider.GetComponent<Rigidbody2D>().velocity.y / 2.5f,20));
-            Debug.Log(rb.velocity);
+            rb.velocity = new Vector2(rb.velocity.x, intervalAbs(5,rb.velocity.y + collision.collider.GetComponent<Rigidbody2D>().velocity.y / 2.5f, (Manager.twoBalls ? 10 : 22)));
             audioS.clip = hitClip;
             audioS.Play();
         }
@@ -46,7 +45,11 @@ public class BallControls : MonoBehaviour {
     }
 
     private void Go() {
-        float r = UnityEngine.Random.Range(0f, 1f);
+        float r;
+        if (Manager.twoBalls)
+            r = Manager.getSide();
+        else r = UnityEngine.Random.Range(0f, 1f);
+
         if (r <= 0.5)
             rb.AddForce(new Vector2(80, 10));
         else
