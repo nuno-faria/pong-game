@@ -32,11 +32,11 @@ public class PlayerControls : MonoBehaviour {
 	}
 
     public void Ai() {
-        if (ball.position.y != rb.position.y && ball.velocity.x != 0) {
+        if (ball.velocity.x != 0) {
             if (ball.position.y >= rb.position.y + 0.5)
-                rb.velocity = new Vector2(0, Speed+5);
+                rb.velocity = new Vector2(0, Speed+8);
             else if (ball.position.y < rb.position.y - 0.5)
-                rb.velocity = new Vector2(0, -Speed-5);
+                rb.velocity = new Vector2(0, -Speed-8);
         }
     }
 }

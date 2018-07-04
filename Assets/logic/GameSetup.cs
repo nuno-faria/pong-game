@@ -27,8 +27,8 @@ public class GameSetup : MonoBehaviour {
         rightWall.size = new Vector2(0.5f, mainCam.ScreenToWorldPoint(new Vector3(0f, Screen.height * 2, 0)).y);
         rightWall.offset = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x - 0.08f, 0);
 
-        player1.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(50, 0, 0)).x, player1.position.y);
-        player2.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width - 50, 0, 0)).x, player1.position.y);
+        player1.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width * 0.04f, 0, 0)).x, player1.position.y);
+        player2.position = new Vector2(mainCam.ScreenToWorldPoint(new Vector3(Screen.width - Screen.width * 0.04f, 0, 0)).x, player1.position.y);
 
         Manager.Reset();
     }

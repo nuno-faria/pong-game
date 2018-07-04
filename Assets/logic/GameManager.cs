@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour {
     public SpriteRenderer pausedBG;
     public Transform ballPrefab;
 
+    public Text scoreP1;
+    public Text scoreP2;
+
     private bool paused = false;
 
     void Start() {
@@ -19,9 +22,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void OnGUI() {
-        GUI.skin = skin;
-        GUI.Label(new Rect(Screen.width / 2 - 100 - 16, 20, 100, 100), Manager.player1Score.ToString());
-        GUI.Label(new Rect(Screen.width / 2 + 100 - 16, 20, 100, 100), Manager.player2Score.ToString());
+        scoreP1.text = Manager.player1Score.ToString();
+        scoreP2.text = Manager.player2Score.ToString();
     }
 
     void Update() {
