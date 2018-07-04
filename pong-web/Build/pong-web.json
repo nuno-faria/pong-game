@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "pong-web.data.unityweb",
+"asmCodeUrl": "pong-web.asm.code.unityweb",
+"asmMemoryUrl": "pong-web.asm.memory.unityweb",
+"asmFrameworkUrl": "pong-web.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
